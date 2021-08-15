@@ -142,46 +142,43 @@ div#gallerybox:hover > div#arrow1 {
     transition: 1000ms;
     border-bottom: 9px solid rgb(255, 255, 255);
     transform: rotate(-225deg);
-    left: 8.5px;
+    left: -9px;
 }
 /*Menu: Gallery END*/
 div#first {
     height: 100vh;
     background-color: rgb(255, 255, 255);
+    overflow: hidden;
 }
 video#movie {
-    position: absolute;
-    height: 100vh;
-    width: 100%;
+    position: relative;
+    min-height: 100vh;
+    min-width: 100vw;
     overflow: hidden;
-    left: 50%;
-    transform: translate(-50%, 0);
+    top: -75%;
     pointer-events: none;
     background-repeat: no-repeat;
-    
 }
+/*
 div#darken {
-    /*not used*/
     position: absolute;
     height: 100%;
     width: 50%;
     left: 50%;
     transform: translate(-50%, 0);
     background-color: rgba(0, 0, 0, 0);
-}
+} 
+*/
 div#firsttextdiv {
     position: absolute;
     top: 70%;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: rgba(255, 255, 255, 0.144);
+    background-color: rgba(255, 255, 255, 0);
 }
 img#firstimage {
     background-image: url('images/purplemoon.png');
     width: 100px;
-}
-img#firsttextdiv:hover > video#movie {
-    
 }
 div#firsttextdiv:hover > img#firstimage {
     transition: 1000ms;
@@ -191,7 +188,9 @@ div#firsttextdiv:not(:hover) > img#firstimage {
     transition: 800ms;
 }
 h1#firsttext {
-
+    position: absolute;
+    top: 65%;
+    left: 50%;
 }
 div#firsttextdiv:hover > h1#firsttext {
     transition: 1000ms;
@@ -214,14 +213,13 @@ div#parallax {
     background-size: cover;
 }
 div#parallax:hover {
-    transition: background-image, 1s;
-    transition: height, 1s;
-    transition: border-top, 3s;
-    background-image: url('images/tokyosunnight.jpg');
-    height: 450px;
+    transition: 1s;
+    background-image: url('images/skywork2.jpg');
+    height: 400px;
 }
 div#parallax:not(:hover) {
-    transition: 500ms;
+    transition: 1s;
+    background-image: url("images/tokyosunnight.jpg");
 }
 div#fourth {
     height: 200px;
