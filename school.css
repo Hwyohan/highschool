@@ -1,0 +1,233 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    width: 100vw;
+}
+div#nav {
+    position: fixed;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.199);
+    border-bottom: 5px double rgb(255, 255, 255);
+    width: 100%;
+    z-index: 1;
+}
+div#nav:hover {
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.555);
+    height: 85px;
+}
+div#nav:not(:hover) {
+    transition: 0.5s;
+    background-color: rgba(0, 0, 0, 0.199);
+    height: 75px;
+}
+
+h1#title {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    font-size: 20px;
+    font-family: 'Lobster', cursive;
+    cursor: default;
+    user-select: none;
+    color: white;
+    background: rgba(0, 0, 0, 0);
+}
+h1#title:hover {
+    transition: 1s;
+}
+div#nav:hover h1#title {
+    transition: 500ms;
+    text-shadow: 1px 2px 0px #000000,
+    4px 4px 0px #b61e1e,
+    5px 5px 0px #3b0d0d;
+    box-shadow: inset 0 0 0 25px rgba(36, 36, 36, 0);
+    letter-spacing: 1px;
+}
+div#nav:not(:hover) h1#title {
+    transition: 0.5s;
+}
+div#nav:active {
+    transition: 200ms;
+    height: 110px;
+}
+div#nav:not(:active) {
+    transition: 300 ms;
+}
+div#nav:active h1#title {
+    transition: 300ms;
+    text-shadow: 1px 2px 0px #000000,
+    4px 4px 0px #b61e1e,
+    5px 5px 0px #3b0d0d,
+    7px 7px 0px #5400c2;
+    letter-spacing: -45px;
+    left: 52.5%;
+}
+/* Menu: Gallery */
+div#gallerybox {
+    opacity: 0;
+    position: absolute;
+    left: 80%;  
+    margin-top: 25px;
+    padding: 4px 8px;
+    background-color: rgba(255, 255, 255, 0);
+}
+div#nav:hover div#gallerybox {
+    opacity: 1;
+}
+div#gallerybox:hover {
+    transition: 300ms;
+    transform: rotate(10deg);
+    background: rgb(255, 255, 255);
+}
+div#gallerybox:not(:hover) {
+    transition: 300ms;
+    transform: rotate(0deg);
+}
+a#gallery {
+    font-family: 'Lobster', cursive;
+    color: white;
+    font-size: 110%;
+    text-decoration: none;
+    user-select: none;
+}
+a#gallery:hover {
+    transition: 1s;
+}
+div#gallerybox:hover > a#gallery {
+    transition: 1s;
+    transform: rotate(30deg);
+    background-image: linear-gradient(45deg,#b61e1e 16.666%, 
+    #c9b9b9 16.666%, 
+    #000000 33.333%, 
+    #000000 33.333%, 
+    #000000 50%, 
+    #000000 50%, 
+    #000000 66.666%, 
+    #000000 66.666%, 
+    #000000 83.333%, 
+    #000000 83.333%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+div#arrow2 {
+    position: absolute;
+    top: 12px;
+    left: 11px;
+    margin-left: 50px;
+    width: 0;
+    height: 0;
+    transform: rotate(135deg);
+    border-bottom: 9px solid rgb(255, 255, 255);
+    border-left: 9px solid transparent;
+}
+div#gallerybox:hover > div#arrow2 {
+    transition: 700ms;
+    border-bottom: 9px solid rgb(0, 0, 0);
+}
+div#arrow1 {
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    margin-left: 50px;
+    width: 0;
+    height: 0;
+    transform: rotate(135deg);
+    border-bottom: 9px solid rgba(255, 0, 0, 0);
+    border-left: 9px solid transparent;
+}
+div#gallerybox:hover > div#arrow1 {
+    transition: 1000ms;
+    border-bottom: 9px solid rgb(255, 255, 255);
+    transform: rotate(-225deg);
+    left: 8.5px;
+}
+/*Menu: Gallery END*/
+div#first {
+    height: 100vh;
+    background-color: rgb(255, 255, 255);
+}
+video#movie {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    left: 50%;
+    transform: translate(-50%, 0);
+    pointer-events: none;
+    background-repeat: no-repeat;
+    
+}
+div#darken {
+    /*not used*/
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(0, 0, 0, 0);
+}
+div#firsttextdiv {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgba(255, 255, 255, 0.144);
+}
+img#firstimage {
+    background-image: url('images/purplemoon.png');
+    width: 100px;
+}
+img#firsttextdiv:hover > video#movie {
+    
+}
+div#firsttextdiv:hover > img#firstimage {
+    transition: 1000ms;
+    transform: rotate(720deg);
+}
+div#firsttextdiv:not(:hover) > img#firstimage {
+    transition: 800ms;
+}
+h1#firsttext {
+
+}
+div#firsttextdiv:hover > h1#firsttext {
+    transition: 1000ms;
+    background-size: 40%;
+}
+div#second {
+    height: 100px;
+    background-color: rgb(39, 39, 39);
+}
+div#third {
+    height: 200px;
+    background-color: rgb(20, 20, 20);
+}
+div#parallax {
+    background-image: url("images/tokyosunnight.jpg");
+    height: 350px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+div#parallax:hover {
+    transition: background-image, 1s;
+    transition: height, 1s;
+    transition: border-top, 3s;
+    background-image: url('images/tokyosunnight.jpg');
+    height: 450px;
+}
+div#parallax:not(:hover) {
+    transition: 500ms;
+}
+div#fourth {
+    height: 200px;
+    background-color: rgb(32, 32, 32);
+}
+div#footer {
+    height: 75px;
+    background-color: rgb(48, 48, 48);
+}
